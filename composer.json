@@ -1,0 +1,16 @@
+{
+    "name": "marco/webt-core-views-in-mvc",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Marco\\WebtCoreViewsInMvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marco Janderka",
+            "email": "75068841+Pycxtv@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
