@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Las Vegas Hotels 🏨</title>
+</head>
+
+<body class="">
+    <h1 class="text-2xl font-bold m-1">Las Vegas Hotels ##key##</h1>
+    <div class="flex justify-center">
+        <main class="flex w-11/12 sm:w-9/12 md:w-6/12 lg:w-4/12 flex-wrap">
+            @@for(hotels)
+            <div class="bg-slate-200 rounded-xl p-4 w-1/2">
+                <h2>##name##</h2>
+                <p>##description##</p>
+                <p>Stars: ##stars##</p>
+            </div>
+            @@end
+        </main>
+    </div>
+
+</body>
+
+</html>
