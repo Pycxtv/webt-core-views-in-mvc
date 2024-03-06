@@ -4,5 +4,8 @@ namespace OnPHPoint\WebtCoreViewsInMvc;
 
 
 class Hotel {
-    public function __construct(public string $name, public string $description, public int $stars) {}
+	public string $stars;
+    public function __construct(public string $name, public string $description, int $stars) {
+		$this->stars = str_repeat("⭐", $stars);
+    }
 }
