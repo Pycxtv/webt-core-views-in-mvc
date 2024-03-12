@@ -40,7 +40,7 @@ while ($atCharacter < strlen($contents)) {
     $current = substr($contents, $atCharacter);
     $atCharacter++;
 
-    if ($inLoop && substr($current, 0, 5) === '@@end') {
+    if ($inLoop && str_starts_with($current, '@@end')) {
         if ($loopIndex < count($data[$loopKey]) - 1) {
             $loopIndex++;
             $atCharacter = $loopStart;
@@ -49,7 +49,7 @@ while ($atCharacter < strlen($contents)) {
             $inLoop = false;
             $atCharacter += 4;
         }
-    } elseif (substr($current, 0, 2) === '##') {
+    } elseif (str_starts_with($current, '##')) {
         $end = strpos($current, '##', 2);
         $key = substr($current, 2, $end - 2);
         if ($inLoop) {
@@ -58,7 +58,7 @@ while ($atCharacter < strlen($contents)) {
             $output .= $data[$key];
         }
         $atCharacter += $end + 1;
-    } elseif (substr($current, 0, 6) === '@@for(') {
+    } elseif (str_starts_with($current, '@@for(')) {
         $end = strpos($current, ')', 6);
         $key = substr($current, 6, $end - 6);
         $inLoop = true;

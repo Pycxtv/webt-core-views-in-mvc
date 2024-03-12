@@ -18,13 +18,13 @@ $output = '';
 $replacements = [
 	'title1' => $hotels[0]->name,
 	'description1' => $hotels[0]->description,
-	'stars1' => str_repeat('⭐', $hotels[0]->stars),
+	'stars1' => $hotels[0]->stars,
 	'title2' => $hotels[1]->name,
 	'description2' => $hotels[1]->description,
-	'stars2' => str_repeat('⭐', $hotels[1]->stars),
+	'stars2' => $hotels[1]->stars,
 	'title3' => $hotels[2]->name,
 	'description3' => $hotels[2]->description,
-	'stars3' => str_repeat('⭐', $hotels[2]->stars),
+	'stars3' => $hotels[2]->stars,
 ];
 
 foreach ($replacements as $key => $value) {
