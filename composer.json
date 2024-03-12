@@ -12,5 +12,7 @@
             "email": "75068841+Pycxtv@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {
+        "typo3fluid/fluid": "^2.10"
+    }
 }
