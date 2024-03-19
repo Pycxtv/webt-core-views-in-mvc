@@ -1,21 +1,21 @@
 <?php
-// namespace OnPHPoint\WebtCoreViewsInMvc;
-
 require_once '../vendor/autoload.php';
-use TYPO3Fluid\Fluid\View\TemplatePaths;
-// use \Type3Fluid\Fluid\View\TemplatePaths;
+use TYPO3Fluid\Fluid\View\TemplateView;
 
+$view = new TemplateView();
 
-$paths = new TemplatePaths();
-$paths->setTemplateRootPaths(['../Resources/Templates/']);
-$paths->setLayoutRootPaths(['../Resources/Layouts/']);
-$paths->setPartialRootPaths(['../Resources/Partials/']);
-// pass the constructed TemplatePaths instance to the View
-$view = new TemplateView($paths);
+$paths = $view->getTemplatePaths();
+$paths->setTemplateRootPaths([
+    __DIR__ . '/../Resources/Templates/'
+]);
+$paths->setLayoutRootPaths([
+    __DIR__ . '/../Resources/Layouts/'
+]);
+$paths->setPartialRootPaths([
+    __DIR__ . '/../Resources/Partials/'
+]);
 
-// assign variables to the view
-// $view->assign('hotels', $hotels);
+$view->assign('foobar', 'It works 🔥');
+// $view->getTemplatePaths()->setTemplatePathAndFilename(__DIR__ . '/../Resources/Templates/Default.html');
 
-// render the view
-echo $view->render('Default.html');
-
+echo $view->render('Default');
