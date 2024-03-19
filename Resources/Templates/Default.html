@@ -9,4 +9,8 @@ Rendering of partial:
 
 Rendering of partial, forced format:
 <f:comment><f:render partial="FirstPartial.html" arguments="{baz: foobar}" /></f:comment>
+
+<f:for each="{hotels}" as="hotel">
+    <f:render partial="Hotel" arguments="{hotel: hotel}"></f:render>
+</f:for>
 </f:section>
