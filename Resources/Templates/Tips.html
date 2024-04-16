@@ -1,14 +1,46 @@
-<f:layout name="Onecolumn" />
+<f:layout name="Twocolumn" />
 
 <!-- TBD: 2-Column-Layout -->
 
-<f:section name="Main">
-<h1 class="text-5xl text-amber-200 mt-3 mb-6 font-bold mx-2.5 flex justify-center">Las Vegas Hotels</h1>
+<f:section name="Left">
+  <h1
+    class="text-5xl text-amber-200 mt-3 mb-6 font-bold mx-2.5 flex justify-center"
+  >
+    Tips
+  </h1>
+  <img class="rounded-xl border-4 border-slate-600" src="https://images.pexels.com/photos/161772/las-vegas-nevada-cities-urban-161772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Las Vegas from above at night">
+</f:section>
+<f:section name="Right">
+  <div class="text-slate-200 flex flex-col gap-4 leading-7 my-8 text-balance">
+    <p>
+      Visiting Las Vegas can be an exhilarating experience, offering a whirlwind
+      of entertainment, attractions, and dazzling lights. To make the most of
+      your trip to Sin City, here are some essential tips to keep in mind.
+      Firstly, embrace the concept of time management. The city never sleeps,
+      and it's easy to lose track of time amid the excitement. Plan your
+      itinerary wisely, allowing for enough time to explore the iconic landmarks
+      like the Strip, Fremont Street, and various themed hotels, while also
+      indulging in world-class dining and shows.
+    </p>
 
-<main class="grid grid-cols-1 grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12 w-full px-12 mb-4">
+    <p>
+      Secondly, set a budget and stick to it. Las Vegas is synonymous with
+      gambling and luxury, but it's crucial to gamble responsibly and not let
+      the allure of the casinos dent your finances. Set aside a specific amount
+      for gambling and entertainment, and resist the temptation to exceed it.
+      Many casinos offer loyalty programs and incentives, so take advantage of
+      these to stretch your budget further.
+    </p>
 
-    <f:for each="{hotels}" as="hotel">
-        <f:render partial="Hotel" arguments="{hotel: hotel}"></f:render>
-    </f:for>
-</main>
+    <p>
+      Lastly, dress comfortably and stay hydrated. The desert climate can be
+      unforgiving, especially during the scorching summer months. Wear
+      lightweight, breathable clothing and comfortable shoes for exploring the
+      vast resorts and attractions. Additionally, keep a water bottle handy at
+      all times to stay hydrated, especially if you plan to spend extended
+      periods outdoors or walking along the Strip. By following these tips,
+      you'll be well-prepared to enjoy everything Las Vegas has to offer while
+      ensuring a memorable and enjoyable visit.
+    </p>
+  </div>
 </f:section>

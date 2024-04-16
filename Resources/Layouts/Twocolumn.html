@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Las Vegas Hotels 🏨</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="h-svh bg-gray-900 flex-col flex">
+    <f:render partial="Menu"></f:render>
+    <div class="flex-1 flex gap-8 mx-8">
+      <div class="flex-1">
+        <f:render section="Left" />
+      </div>
+      <div class="flex-1">
+        <f:render section="Right" />
+      </div>
+    </div>
+    <f:render partial="Footer"></f:render>
+  </body>
+</html>
